@@ -4,5 +4,64 @@
 }
 
 body {
-  background-color:blue;
+  display:flex;
+  flex-flow: column nowrap;
+  background-color: whitesmoke;
+  font-size:1rem;
+}
+
+#top-block {
+  display:flex;
+  flex-flow: row nowrap;
+  justify-content:space-between;
+  align-items:center;
+  padding:5vmin;
+}
+
+#headshot {
+  width:17vmin;
+  height:17vmin;
+  background: grey;
+  border-radius:50%;
+}
+
+#main-title {
+  font-size:6em;
+}
+
+nav {
+  display:flex;
+  flex-flow: column nowrap;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.closed-nav {
+  height:17vmin;
+  width:17vmin;
+  border-radius:50%;
+  background-color:rgba(150,150,200,.8);
+}
+
+nav ul, nav li {
+  display:none;
+}
+
+nav ion-icon {
+  font-size:128px;
+  color:white;
+}
+
+
+
+
+
+
+
+
+
+
+.project{
+
 }
