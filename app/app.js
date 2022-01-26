@@ -6,7 +6,7 @@ $(() => {
   for (let obj of projects) {
     let project = $('<div>')
                   .addClass('project')
-                  .attr('id',`project-${indexOf(obj)}`)
+                  .attr('id',`project-${projects.indexOf(obj)}`)
     $('body').append(project)
   }
 

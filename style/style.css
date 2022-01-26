@@ -16,6 +16,7 @@ body {
   justify-content:space-between;
   align-items:center;
   padding:5vmin;
+  border:1px solid black;
 }
 
 #headshot {
@@ -44,7 +45,29 @@ nav {
   background-color:rgba(150,150,200,.8);
 }
 
-nav ul, nav li {
+.closed-nav:hover{
+  cursor:pointer;
+}
+
+.closed-nav:active{
+  cursor:pointer;
+  background-color:rgba(150,150,200,1);
+  user-select:none;
+}
+/* on .addClass('open-nav') .hide()#main-title & #headshot */
+.open-nav {
+  position:fixed;
+  top:0;
+  right:0;
+  width:80vmin;
+  list-style:none;
+  padding:10vmin 0;
+  margin:0;
+  border:1px solid black;
+  background-color:rgba(150,150,200,1)
+}
+
+.hide {
   display:none;
 }
 
@@ -53,6 +76,11 @@ nav ion-icon {
   color:white;
 }
 
+.nav-list {
+  color:white;
+  font-size:3em;
+  padding:5vmin 0;
+}
 
 
 
