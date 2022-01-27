@@ -54,21 +54,21 @@ nav {
   background-color:rgba(150,150,200,1);
   user-select:none;
 }
-/* on .addClass('open-nav') .hide()#main-title & #headshot */
-.open-nav {
+
+.hide {
+  display:none;
+}
+
+#open-nav {
   position:fixed;
   top:0;
   right:0;
   width:80vmin;
   list-style:none;
-  padding:10vmin 0;
+  padding:10vmin;
   margin:0;
   border:1px solid black;
   background-color:rgba(150,150,200,1)
-}
-
-.hide {
-  display:none;
 }
 
 nav ion-icon {
@@ -88,8 +88,62 @@ nav ion-icon {
 
 
 
+#project-container {
+  display:flex;
+  flex-flow:row wrap;
+  justify-content:space-around;
+  align-items:center;
+  width:100%
+}
+
+#project-list-title {
+  font-size:5em;
+  background-color:grey;
+  width:100%;
+  padding:2rem;
+  text-align:center;
+  color:white;
+}
+
 
 
 .project{
+  display:flex;
+  flex-flow: column nowrap;
+  justify-content:space-around;
+  align-items:center;
+  width:100%;
+  margin:2%;
+  border:1px solid darkgrey;
+  box-shadow:2px 2px 1px black;
+}
 
+#project-0 {
+  flex-grow:1;
+}
+
+.project-thumbnail {
+  width:100%;
+  height:96vmin;
+  margin:0 auto;
+  background-color:darkgrey;
+  border:1px solid black;
+}
+
+.project-title {
+  font-size:5em;
+  text-align:center;
+  width:100%;
+  background-color:darkgrey;
+  color:white;
+  font-weight:bold;
+}
+
+.project-description {
+  font-size:4em;
+  text-align:left;
+  width:100%;
+  padding:2vmin 5px 5px 2vmin;
+  box-sizing:border-box;
+  border:1px solid black;
 }
