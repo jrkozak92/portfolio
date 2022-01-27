@@ -2,7 +2,13 @@ const projects = [{name: 'test',
                   description: 'testing stuff',
                   imageRef: '../images/test-project'}]
 
+
+
+
+
+
 $(() => {
+  //Loops through Projects array to create cards
   for (let obj of projects) {
     let $project = $('<div>')
                   .addClass('project')
@@ -24,12 +30,22 @@ $(() => {
     $project.append($title)
     $project.append($description)
     $('#project-container').append($project)
+  }
+    //Nav controller
     $('#closed-nav').on('click', () => {
-      $('#open-nav').toggleClass('hide')
+      let display = $('#open-nav').css('display')
+      if (display === 'none') {
+        $('#open-nav').css('display','flex')
+      } else {
+        $('#open-nav').css('display','none')
+      }
     })
     $('ion-icon').on('click', () => {
-      $('#open-nav').toggleClass('hide')
+      let display = $('#open-nav').css('display')
+      if (display === 'none') {
+        $('#open-nav').css('display','flex')
+      } else {
+        $('#open-nav').css('display','none')
+      }
     })
-  }
-
 })
