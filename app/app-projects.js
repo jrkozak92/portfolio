@@ -1,6 +1,13 @@
-const bestProjects = [{name: 'test',
+const projects = [{name: 'test',
                   description: 'testing stuff',
-                  imageRef: './images/test-project.png'}]
+                  imageRef: '../images/test-project.png'},
+                  {name: 'test',
+                  description: 'testing stuff',
+                  imageRef: '../images/test-project.png'},
+                  {name: 'test',
+                  description: 'testing stuff',
+                  imageRef: '../images/test-project.png'}
+                ]
 
 
 
@@ -9,10 +16,10 @@ const bestProjects = [{name: 'test',
 
 $(() => {
   //Loops through Projects array to create cards
-  for (let obj of bestProjects) {
+  for (let obj of projects) {
     let $project = $('<div>')
                   .addClass('project')
-                  .attr('id',`project-${bestProjects.indexOf(obj)}`)
+                  .attr('id',`project-${projects.indexOf(obj)}`)
 
     let $image = $('<img>')
                 .attr('src', obj.imageRef)

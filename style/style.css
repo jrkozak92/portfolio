@@ -103,7 +103,7 @@ nav ion-icon {
   flex-flow:row wrap;
   justify-content:space-around;
   align-items:center;
-  width:100%
+  margin:2%;
 }
 
 #project-list-title {
@@ -123,7 +123,7 @@ nav ion-icon {
   justify-content:space-around;
   align-items:center;
   width:100%;
-  margin:2%;
+  margin-top:2vmin;
   border:1px solid darkgrey;
   box-shadow:2px 2px 1px black;
 }
