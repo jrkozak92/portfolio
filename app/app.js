@@ -38,12 +38,13 @@ $(() => {
     $('ion-icon').on('click', () => {
       $('#open-nav').slideToggle()
     })
+    let firstLoad = undefined;
     if ( $(window).attr('innerWidth') >= 820 && !firstLoad){
       $('#open-nav').css('display','flex')
     } else {
       $('#open-nav').css('display','none')
     }
-    let firstLoad = false;
+    firstLoad = false;
     $(window).resize(() => {
       if ( $(window).attr('innerWidth') >= 820 ){
         $('#open-nav').css('display','flex')
