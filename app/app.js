@@ -38,6 +38,11 @@ $(() => {
     $('ion-icon').on('click', () => {
       $('#open-nav').slideToggle()
     })
+    if ( $(window).attr('innerWidth') >= 820 ){
+      $('#open-nav').css('display','flex')
+    } else {
+      $('#open-nav').css('display','none')
+    }
     $(window).resize(() => {
       if ( $(window).attr('innerWidth') >= 820 ){
         $('#open-nav').css('display','flex')

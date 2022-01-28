@@ -59,7 +59,6 @@ Stretch Goal - Have box-shadow rotate without image using pseudo elements
   color:black;
   font-weight:bold;
   text-align:center;
-  z-index:1;
 }
 
 nav {
@@ -283,7 +282,7 @@ nav ion-icon {
     align-content:left;
     width:14vmin;
     text-align:left;
-    margin-bottom:2vmin;
+    margin-bottom:6vmin;
     padding:5vmin 5vmin 0 5vmin ;
   }
 
@@ -378,6 +377,7 @@ nav ion-icon {
     color:black;
     font-weight:bold;
     text-align:center;
+    z-index:1;
   }
 
   nav{

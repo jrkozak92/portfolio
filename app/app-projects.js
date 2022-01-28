@@ -38,21 +38,18 @@ $(() => {
     $project.append($description)
     $('#project-container').append($project)
   }
-    //Nav controller
-    $('#closed-nav').on('click', () => {
-      let display = $('#open-nav').css('display')
-      if (display === 'none') {
-        $('#open-nav').css('display','flex')
-      } else {
-        $('#open-nav').css('display','none')
-      }
-    })
-    $('ion-icon').on('click', () => {
-      let display = $('#open-nav').css('display')
-      if (display === 'none') {
-        $('#open-nav').css('display','flex')
-      } else {
-        $('#open-nav').css('display','none')
-      }
-    })
+  //Nav controller
+  $('#closed-nav').on('click', () => {
+    $('#open-nav').slideToggle()
+  })
+  $('ion-icon').on('click', () => {
+    $('#open-nav').slideToggle()
+  })
+  $(window).resize(() => {
+    if ( $(window).attr('innerWidth') >= 820 ){
+      $('#open-nav').css('display','flex')
+    } else {
+      $('#open-nav').css('display','none')
+    }
+  })
 })
