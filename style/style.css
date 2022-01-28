@@ -10,7 +10,7 @@
 body {
   display:flex;
   flex-flow: column nowrap;
-  background: whitesmoke url('../images/skyline1.png') no-repeat fixed 30%/auto 100%;
+  background: whitesmoke url('../images/skyline1.png') no-repeat fixed 30%/cover;
   font-size:1rem;
 }
 
@@ -180,11 +180,12 @@ nav ion-icon {
 #project-container {
   display:flex;
   flex-flow:row wrap;
+  align-self:center;
   justify-content:space-between;
   align-items:center;
   align-content:center;
   gap:2%;
-  margin:2% 2%;
+  margin-top:2%;
 }
 
 #project-list-title {
@@ -338,14 +339,13 @@ nav ion-icon {
 @media screen and (min-width: 1024px) {
   #top-block {
     display:flex;
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
     justify-content:space-between;
-    align-items:left;
-    align-content:left;
-    width:14vmin;
+    align-items:flex-end;
+    align-content:flex-end;
+    width:29vmin;
     text-align:left;
-    margin-bottom:2vmin;
-    padding:5vmin 5vmin 0 5vmin ;
+    padding:2.5vmin 5vmin 0 5vmin ;
   }
 
   #headshot {
@@ -355,9 +355,11 @@ nav ion-icon {
     border-radius:50%;
     box-sizing:content-box;
     border:2px solid white;
+    z-index:1;
   }
 
   #main-title {
+    height:2em;
     font-size:1.5em;
     color:black;
     font-weight:bold;
@@ -370,18 +372,15 @@ nav ion-icon {
 
 
   #open-nav {
-    align-self:flex-end;
-    position:absolute;
-    top:2vmin;
+    top:0;
     display:flex;
     flex-flow:row nowrap;
     justify-content: space-evenly;
     align-items: baseline;
-    width:76vw;
+    width:100vw;
     list-style:none;
-    padding:0;
-    padding-top:10vmin;
-    padding-bottom:10vmin;
+    padding:1em;
+    padding-left:15vmin;
     border:none;
     background-color:rgba(150,150,200,1)
   }
@@ -408,5 +407,13 @@ nav ion-icon {
 
   .nav-list{
 
+  }
+
+  #project-container {
+    max-width:1200px;
+  }
+
+  .project {
+    flex:0 3 32%;
   }
 }
