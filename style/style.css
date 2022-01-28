@@ -29,7 +29,30 @@ body {
   border-radius:50%;
   box-sizing:content-box;
   border:2px solid white;
+  transition: all .2s ease-in-out;
 }
+
+#headshot {
+  width:17vmin;
+  height:17vmin;
+  background: grey;
+  border-radius:50%;
+  box-sizing:content-box;
+  border:2px solid white;
+  transition: all .2s ease-in-out;
+}
+
+#headshot:hover {
+  transform: rotate(360deg);
+  box-shadow: -2vmin -2vmin rgba(150,150,200,1), 2vmin 2vmin rgba(232,232,86,.8);
+}
+
+/*
+Stretch Goal - Have box-shadow rotate without image using pseudo elements
+#headshot:hover::after {
+  transform: rotate(180deg);
+  box-shadow: 2vmin 2vmin rgba(150,150,200,1), -2vmin -2vmin rgba(232,232,86,.8);
+} */
 
 #main-title {
   font-size:2em;
@@ -79,7 +102,8 @@ nav {
   margin:0;
   box-sizing:border-box;
   border:1px solid black;
-  background-color:rgba(150,150,200,1)
+  background-color:rgba(150,150,200,1);
+  box-shadow:3px 3px rgba(232,232,86,.8);
 }
 
 nav ion-icon {
@@ -95,7 +119,7 @@ nav ion-icon {
 }
 
 .nav-link:hover{
-  text-shadow:1px 1px #eeeeee;
+  text-shadow:1px 1px rgba(232,232,86,1);
 }
 
 .nav-link:active {
@@ -145,7 +169,7 @@ nav ion-icon {
 
 .link-text:hover {
   color:white;
-  text-shadow:2px 2px black;
+  text-shadow:2px 2px rgba(232,232,86,.8);
 }
 
 .small {
@@ -160,17 +184,18 @@ nav ion-icon {
   align-items:center;
   align-content:center;
   gap:2%;
-  margin:0 2%;
+  margin:2% 2%;
 }
 
 #project-list-title {
   font-size:2em;
-  background-color: rgba(255,255,255,.5);
+  background-color: rgba(232,232,86,.8);
+  box-shadow:3px 3px rgba(150,150,200,1);
   width:100%;
   padding:1rem;
   text-align:center;
   color:white;
-  text-shadow:1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black;
+  text-shadow:3px 3px black, -1px 1px black, 1px -1px black, -1px -1px black;
 }
 
 
@@ -184,7 +209,7 @@ nav ion-icon {
   margin-top:2vmin;
   border:1px solid darkgrey;
   box-sizing:border-box;
-  box-shadow:3px 3px 1px black;
+  box-shadow:3px 3px rgba(150,150,200,1);
 }
 
 .project-thumbnail {
@@ -198,7 +223,7 @@ nav ion-icon {
   font-size:1.5em;
   text-align:center;
   width:100%;
-  background-color:darkgrey;
+  background-color:rgba(150,150,200,1);
   color:white;
   font-weight:bold;
   text-shadow:1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black;
@@ -269,14 +294,15 @@ nav ion-icon {
 
 
   #open-nav {
+    align-self:flex-end;
+    position:absolute;
+    top:2vmin;
     display:flex;
     flex-flow:row nowrap;
     justify-content: space-evenly;
     align-items: baseline;
     width:76vw;
     list-style:none;
-    margin:0;
-    margin-bottom:2vmin;
     padding:0;
     padding-top:10vmin;
     padding-bottom:10vmin;
@@ -296,7 +322,7 @@ nav ion-icon {
   }
 
   .nav-link:hover{
-    text-shadow:1px 1px black;
+    text-shadow:1px 1px rgba(232,232,86,.8);
   }
 
   .nav-link:active {
@@ -307,9 +333,80 @@ nav ion-icon {
   .nav-list{
 
   }
-
 }
 
 @media screen and (min-width: 1024px) {
+  #top-block {
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content:space-between;
+    align-items:left;
+    align-content:left;
+    width:14vmin;
+    text-align:left;
+    margin-bottom:2vmin;
+    padding:5vmin 5vmin 0 5vmin ;
+  }
 
+  #headshot {
+    width:13vmin;
+    height:13vmin;
+    background: grey;
+    border-radius:50%;
+    box-sizing:content-box;
+    border:2px solid white;
+  }
+
+  #main-title {
+    font-size:1.5em;
+    color:black;
+    font-weight:bold;
+    text-align:center;
+  }
+
+  nav{
+    display:none;
+  }
+
+
+  #open-nav {
+    align-self:flex-end;
+    position:absolute;
+    top:2vmin;
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content: space-evenly;
+    align-items: baseline;
+    width:76vw;
+    list-style:none;
+    padding:0;
+    padding-top:10vmin;
+    padding-bottom:10vmin;
+    border:none;
+    background-color:rgba(150,150,200,1)
+  }
+
+  nav ion-icon {
+    display:none;
+  }
+
+  .nav-link {
+    color:white;
+    text-decoration:none;
+    font-size:1.5em;
+    padding:1vmin 0;
+  }
+
+  .nav-link:hover{
+    text-shadow:1px 1px rgba(232,232,86,.8);
+  }
+
+  .nav-link:active {
+    color:#eeeeee;
+    text-shadow:1px 1px black;
+  }
+
+  .nav-list{
+
+  }
 }
