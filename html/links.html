@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
     <title>Joey's Portfolio</title>
     <link href="../style/style.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -16,12 +17,19 @@
       <a href="#" class="nav-link"><li class="nav-list ">Links</li></a>
     </ul>
     <div id="top-block">
-      <img id="headshot" src="headshot"/>
+      <img id="headshot" src="../images/headshot.png"/>
       <p id="main-title">Joey Kozak</p>
       <nav class="closed-nav">
         <ion-icon name="menu-outline"></ion-icon>
       </nav>
     </div>
+    <!-- Links go here, might as well include ionicons -->
+    <h2 id="link-list-title">Links</h2>
+    <ul id="link-container">
+      <li class="list-link"><a href="#" class="link-icon"></a><a href="#" class="link-text">My GitHub</a></li>
+      <li class="list-link"><a href="#" class="link-icon"></a><a href="#" class="link-text">My LinkedIn</a></li>
+      <li class="list-link"><a href="#" class="link-icon"></a><a href="#" class="link-text">My Business <span class="small">(Don't mind the website, I made it well before I started my web-design course)</span></a></li>
+    </ul>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   </body>
