@@ -145,12 +145,24 @@ nav ion-icon {
 #welcome:hover {
     transition: all .2s ease-in-out;
     text-shadow: -1vmin -1vmin rgba(150,150,200,.6), 1vmin 1vmin rgba(232,232,86,.6);
-}
+    /* stretch goal - have text-shadow animate breifly out and back in on hover, maybe use .hover() jquery
+} */
 
 .content {
   background-color: rgba(255,255,255,.5);
   padding:1em;
   margin:1em 0;
+}
+
+.content-links {
+  font-weight:bold;
+  text-decoration:none;
+  color:rgba(150,150,200,1);
+  text-shadow:1px 1px black;
+}
+
+.content-links:hover {
+  text-shadow:none;
 }
 
 #link-list-title {
