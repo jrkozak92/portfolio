@@ -105,11 +105,13 @@ nav {
   background-color:rgba(150,150,200,1);
   box-shadow:3px 3px rgba(232,232,86,.8);
   transition: all .5s linear;
+  z-index:1;
 }
 
 nav ion-icon {
   font-size:128px;
   color:white;
+  z-index:1;
 }
 
 .nav-link {
@@ -268,6 +270,43 @@ nav ion-icon {
   padding:2vmin 5px 5px 2vmin;
   box-sizing:border-box;
   border:1px solid black;
+}
+
+#resume-container {
+  display:flex;
+  flex-flow: column nowrap;
+  justify-content:flex-start;
+  align-items:center;
+  padding:2%;
+  margin:2%;
+  background-color: rgba(255,255,255,.5);
+}
+
+#resume-page-title {
+  font-size:2em;
+  position:relative;
+  background-color: rgba(232,232,86,.8);
+  box-shadow:3px 3px rgba(150,150,200,1);
+  padding:1rem;
+  width:100%;
+  text-align:center;
+  box-sizing:border-box;
+  color:white;
+  text-shadow:3px 3px black, -1px 1px black, 1px -1px black, -1px -1px black;
+}
+
+#name-top {
+  font-size:2em;
+  margin:.25em;
+}
+
+.resume-links {
+  margin:0 1em;
+}
+
+.info-text {
+  display:inline;
+  margin:0 1em;
 }
 
 .hide {
