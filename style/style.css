@@ -444,6 +444,7 @@ nav ion-icon {
     color:white;
     font-weight:bold;
     text-align:center;
+    z-index:1;
   }
 
   nav{
