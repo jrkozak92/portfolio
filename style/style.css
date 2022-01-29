@@ -25,28 +25,38 @@ body {
   padding:5vmin;
 }
 
+
+
 #headshot {
+  display:block;
+  position:relative;
+  min-width:17vmin;
   width:17vmin;
   height:17vmin;
-  background: grey;
+  padding:0;
+  margin:0;
+  background: url('../images/headshot.png') no-repeat 50%/contain;
   border-radius:50%;
   box-sizing:content-box;
   border:2px solid white;
-  transition: all .2s ease-in-out;
+
 }
 
-#headshot {
-  width:17vmin;
-  height:17vmin;
-  background: grey;
+#headshot::after {
+  content:"";
+  position:absolute;
+  background-color:transparent;
+  width:inherit;
+  height:inherit;
+  margin:-2px 0 0 -2px;
+  padding:0;
+  border:2px solid transparent;
   border-radius:50%;
-  box-sizing:content-box;
-  border:2px solid white;
-  transition: all .2s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
-#headshot:hover {
-  transform: rotate(360deg);
+#headshot:hover::after {
+  transform: rotate(720deg);
   box-shadow: 2vmin 2vmin rgba(150,150,200,1), -2vmin -2vmin rgba(232,232,86,1), -2.1vmin -2.1vmin black, 2.1vmin 2.1vmin black;
 }
 
@@ -401,6 +411,7 @@ nav ion-icon {
 
   #headshot, .closed-nav {
     height:13vmin;
+    min-width:0;
     width:13vmin;
   }
 
@@ -423,12 +434,9 @@ nav ion-icon {
   }
 
   #headshot {
+    min-width:0;
     width:13vmin;
     height:13vmin;
-    background: grey;
-    border-radius:50%;
-    box-sizing:content-box;
-    border:2px solid white;
   }
 
   #main-title {
@@ -499,12 +507,9 @@ nav ion-icon {
   }
 
   #headshot {
+    min-width:0;
     width:13vmin;
     height:13vmin;
-    background: grey;
-    border-radius:50%;
-    box-sizing:content-box;
-    border:2px solid white;
     z-index:1;
   }
 
