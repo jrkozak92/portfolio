@@ -277,9 +277,8 @@ nav ion-icon {
   flex-flow: column nowrap;
   justify-content:flex-start;
   align-items:center;
-  max-width:1300px;
   padding:2%;
-  margin:0 auto 2% auto;
+  margin:2%;
   background-color: rgba(255,255,255,.5);
 }
 
@@ -547,5 +546,11 @@ nav ion-icon {
 
   .project {
     flex:0 3 32%;
+  }
+
+  #resume-container {
+    max-width:1300px;
+    align-self:center;
+    margin-top:0;
   }
 }
