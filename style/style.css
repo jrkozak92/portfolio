@@ -277,8 +277,9 @@ nav ion-icon {
   flex-flow: column nowrap;
   justify-content:flex-start;
   align-items:center;
+  max-width:1300px;
   padding:2%;
-  margin:2%;
+  margin:0 auto 2% auto;
   background-color: rgba(255,255,255,.5);
 }
 
@@ -297,17 +298,78 @@ nav ion-icon {
 
 #name-top {
   font-size:2em;
-  margin:.25em;
+  margin:.5em .25em .25em .25em;
 }
 
-.resume-links {
-  margin:0 1em;
+#info {
+  display:flex;
+  flex-flow: row wrap;
+  justify-content:space-around;
+  align-items:space-around;
+  margin: 1vmin auto;
 }
 
 .info-text {
-  display:inline;
-  margin:0 1vmin;
+  text-align:center;
+  min-width:150px;
+  padding:.5em;
+  margin:0 auto;
 }
+
+#summary {
+  padding:1vmin;
+  border-top: 1px solid rgba(150,150,200,1);
+  border-bottom: 1px solid rgba(150,150,200,1);
+}
+
+#technical-skills ul {
+  margin-left:5vmin;
+}
+
+.resume-section-title {
+  text-align:center;
+  font-size:1em;
+  padding:.5em;
+  color:white;
+  text-shadow:1px 1px black;
+  margin:2vmin auto;
+  background-color: rgba(150,150,200,1);
+  box-shadow:3px 3px rgba(232,232,86,1);
+}
+
+.job-company {
+  font-weight:bold;
+  margin-top:2vmin;
+}
+
+.job-title {
+  font-style:italic;
+}
+
+.job-description {
+
+}
+
+#employment ul {
+  margin-left:5vmin;
+}
+
+.ed-div{
+  margin: 2vmin auto;
+}
+
+.ed-establishment {
+  font-weight:bold;
+}
+
+.ed-location {
+  font-style:italic;
+}
+
+.right-float {
+  float:right;
+}
+
 
 .hide {
   display:none;
