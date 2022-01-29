@@ -46,7 +46,7 @@ $(() => {
   $('#closed-nav').on('click', () => {
     $('#open-nav').slideToggle()
   })
-  $('ion-icon').on('click', () => {
+  $('ion-icon').eq(0).on('click', () => {
     $('#open-nav').slideToggle()
   })
   let firstLoad = undefined;
