@@ -2,9 +2,12 @@
   width: device-width;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
   margin:0;
   padding:0;
+  font-family: 'Montserrat Alternates', sans-serif;
 }
 
 body {
@@ -44,7 +47,7 @@ body {
 
 #headshot:hover {
   transform: rotate(360deg);
-  box-shadow: 2vmin 2vmin rgba(150,150,200,.8), -2vmin -2vmin rgba(232,232,86,.8);
+  box-shadow: 2vmin 2vmin rgba(150,150,200,1), -2vmin -2vmin rgba(232,232,86,1), -2.1vmin -2.1vmin black, 2.1vmin 2.1vmin black;
 }
 
 /*
@@ -56,9 +59,11 @@ Stretch Goal - Have box-shadow rotate without image using pseudo elements
 
 #main-title {
   font-size:2em;
-  color:black;
   font-weight:bold;
+  color:white;
   text-align:center;
+  padding:0 2vmin;
+  text-shadow:3px 3px black, 1px -1px black, -1px 1px black, -1px -1px black;
 }
 
 nav {
@@ -101,7 +106,6 @@ nav {
   padding:10vmin;
   margin:0;
   box-sizing:border-box;
-  border:1px solid black;
   background-color:rgba(150,150,200,1);
   box-shadow:3px 3px rgba(232,232,86,.8);
   transition: all .5s linear;
@@ -141,12 +145,14 @@ nav ion-icon {
   font-size:3em;
   text-align:center;
   margin-bottom:2rem;
+  color:white;
+  text-shadow: 1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black;
   transition: all .2s ease-in-out;
 }
 
 #welcome:hover {
     transition: all .2s ease-in-out;
-    text-shadow: -1vmin -1vmin rgba(150,150,200,.6), 1vmin 1vmin rgba(232,232,86,.6);
+    text-shadow:1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black, -1vmin -1vmin rgba(150,150,200,.6), 1vmin 1vmin rgba(232,232,86,.6);
     /* stretch goal - have text-shadow animate breifly out and back in on hover, maybe use .hover() jquery
 */
 }
@@ -160,12 +166,22 @@ nav ion-icon {
 .content-links {
   font-weight:bold;
   text-decoration:none;
-  color:rgba(150,150,200,1);
-  text-shadow:1px 1px black;
+  color:rgba(100,100,150,1);
 }
 
 .content-links:hover {
-  text-shadow:none;
+  text-shadow:1px 1px rgba(232,232,86,.8);
+}
+
+#bio-title {
+  font-size:2em;
+  background-color: rgba(232,232,86,.8);
+  box-shadow:3px 3px rgba(150,150,200,1);
+  padding:1rem;
+  margin-top:.5em;
+  text-align:center;
+  color:white;
+  text-shadow:3px 3px black, -1px 1px black, 1px -1px black, -1px -1px black;
 }
 
 #link-list-title {
@@ -183,17 +199,17 @@ nav ion-icon {
   text-align:center;
   background-color: rgba(255,255,255,.5);
   list-style:none;
-  margin:0 2%;
+  margin:0 2% 2% 2%;
   box-shadow:3px 3px rgba(150,150,200,1);
 }
 
 .list-link {
   display:flex;
-  max-width:350px;
+  max-width:400px;
   flex-flow: row nowrap;
   justify-content:space-between;
   align-items:center;
-  text-align:left;
+  text-align:right;
   font-size:1.5em;
   padding:1em 1em 1em 2em;
   margin:0 auto;
@@ -201,6 +217,7 @@ nav ion-icon {
 
 .link-icon {
   font-size:32px;
+  color:rgba(100,100,150,1);
   padding:1rem;
 }
 
@@ -239,6 +256,7 @@ nav ion-icon {
   justify-content:space-around;
   align-items:center;
   flex:1 2 auto;
+  text-decoration:none;
   margin-top:2vmin;
   border:1px solid darkgrey;
   box-sizing:border-box;
@@ -265,6 +283,7 @@ nav ion-icon {
 .project-description {
   font-size:1em;
   text-align:left;
+  color:black;
   width:100%;
   background-color:whitesmoke;
   padding:2vmin 5px 5px 2vmin;
@@ -414,7 +433,7 @@ nav ion-icon {
 
   #main-title {
     font-size:1.5em;
-    color:black;
+    color:white;
     font-weight:bold;
     text-align:center;
   }
@@ -473,9 +492,10 @@ nav ion-icon {
     justify-content:space-between;
     align-items:flex-end;
     align-content:flex-end;
-    width:29vmin;
+    width:32vmin;
     text-align:left;
     padding:2.5vmin 5vmin 0 5vmin ;
+    margin-bottom:0;
   }
 
   #headshot {
@@ -491,9 +511,10 @@ nav ion-icon {
   #main-title {
     height:2em;
     font-size:1.5em;
-    color:black;
+    color:white;
     font-weight:bold;
     text-align:center;
+    padding:0;
     z-index:1;
   }
 
@@ -551,6 +572,6 @@ nav ion-icon {
   #resume-container {
     max-width:1300px;
     align-self:center;
-    margin-top:0;
+    margin-top:1em;
   }
 }

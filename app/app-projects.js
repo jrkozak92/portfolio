@@ -1,12 +1,15 @@
 const projects = [{name: 'test',
                   description: 'testing stuff',
-                  imageRef: '../images/test-project.png'},
+                  imageRef: '../images/test-project.png',
+                  path: '../projects/#'},
                   {name: 'test',
                   description: 'testing stuff',
-                  imageRef: '../images/test-project.png'},
+                  imageRef: '../images/test-project.png',
+                  path: '../projects/#'},
                   {name: 'test',
                   description: 'testing stuff',
-                  imageRef: '../images/test-project.png'}
+                  imageRef: '../images/test-project.png',
+                  path: '../projects/#'}
                 ]
 
 
@@ -17,9 +20,10 @@ const projects = [{name: 'test',
 $(() => {
   //Loops through Projects array to create cards
   for (let obj of projects) {
-    let $project = $('<div>')
+    let $project = $('<a>')
                   .addClass('project')
                   .attr('id',`project-${projects.indexOf(obj)}`)
+                  .attr('href', obj.path)
 
     let $image = $('<img>')
                 .attr('src', obj.imageRef)
