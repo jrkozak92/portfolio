@@ -1,7 +1,7 @@
-const projects = [{name: 'test',
-                  description: 'testing stuff',
-                  imageRef: '../images/test-project.png',
-                  path: '../projects/#'},
+const projects = [{name: 'Etch-a-Sketch',
+                  description: 'jQuery app that emulates a digital Etch-a-Sketch, complete with Classic trace and Drag to Draw modes.',
+                  imageRef: '../images/etch-a-sketch.png',
+                  path: '../projects/etch-a-sketch/index.html'},
                   {name: 'test',
                   description: 'testing stuff',
                   imageRef: '../images/test-project.png',
@@ -24,6 +24,7 @@ $(() => {
                   .addClass('project')
                   .attr('id',`project-${projects.indexOf(obj)}`)
                   .attr('href', obj.path)
+                  .attr('target','_blank')
 
     let $image = $('<img>')
                 .attr('src', obj.imageRef)
@@ -40,6 +41,13 @@ $(() => {
     $project.append($image)
     $project.append($title)
     $project.append($description)
+
+    $project.on('click', () => {
+      //modal creation and population
+
+    })
+
+
     $('#project-container').append($project)
   }
   //Nav controller

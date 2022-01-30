@@ -35,5 +35,5 @@ $(() => {
     $('body').append($pixel)
   }
 
-
+  $('#clear').on('click', () => {location.reload()})
 })

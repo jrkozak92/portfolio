@@ -18,6 +18,29 @@ body {
 
 #checkbox-box {
   position:absolute;
-  bottom:5%;
-  right:5%;
+  display:flex;
+  flex-flow:row nowrap;
+  justify-content:space-around;
+  align-items:center;
+  gap:5%;
+  max-width:50%;
+  width:400px;
+  top:0;
+  right:0;
+  font-family:sans-serif;
+  font-weight:bold;
+  color:white;
+  padding:5px;
+  background-color:rgba(128,128,128,.8);
+  text-shadow: 1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black;
+}
+
+#clear {
+  padding:.5em;
+  border:1px solid black;
+  border-radius:10px;
+  color:white;
+  cursor:pointer;
+  text-shadow: 1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black;
+  background-color:rgba(90,90,90,1);
 }
