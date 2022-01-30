@@ -1,12 +1,16 @@
-const bestProjects = [{name: 'Etch-a-Sketch',
-                  description: 'jQuery app that emulates a digital Etch-a-Sketch, complete with Classic trace and Drag to Draw modes.',
-                  imageRef: './images/etch-a-sketch.png',
-                  path: './projects/etch-a-sketch/index.html'}]
-
-
-
-
-
+const bestProjects = [{name: 'Click Battle!',
+                      description: 'Can you click faster than the computer? How long can you keep it up?',
+                      imageRef: './images/click-battle.png',
+                      path: './projects/click-battle/index.html'},
+                      {name: 'Etch-a-Sketch',
+                      description: 'jQuery app that emulates a digital Etch-a-Sketch, complete with Classic trace and Drag to Draw modes.',
+                      imageRef: './images/etch-a-sketch.png',
+                      path: './projects/etch-a-sketch/index.html'},
+                      {name:'Flowerbox',
+                      description:'Flexbox-intensive Mockup copy of a fake company website',
+                      imageRef:'./images/flowerbox.png',
+                      path:'./projects/FlowerBox/index.html'}
+                    ]
 
 $(() => {
   //Loops through Projects array to create cards

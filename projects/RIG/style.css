@@ -1,0 +1,13 @@
+.random-image {
+  display:flex;
+  flex-flow:row wrap;
+  height:100px;
+  width:100px;
+  background-color:darkgrey;
+  color:white;
+  justify-content:center;
+  align-items:center;
+  align-content:center;
+  text-align:center;
+  cursor:pointer;
+}

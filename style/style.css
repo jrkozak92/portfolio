@@ -137,6 +137,7 @@ nav ion-icon {
 
 .nav-link:hover{
   text-shadow:1px 1px rgba(232,232,86,1);
+  cursor:pointer;
 }
 
 .nav-link:active {
@@ -241,7 +242,7 @@ nav ion-icon {
   flex-flow:row wrap;
   align-self:center;
   justify-content:space-between;
-  align-items:center;
+  align-items:baseline;
   align-content:center;
   gap:2%;
   margin:2%;
@@ -258,8 +259,6 @@ nav ion-icon {
   text-shadow:3px 3px black, -1px 1px black, 1px -1px black, -1px -1px black;
 }
 
-
-
 .project{
   display:flex;
   flex-flow: column nowrap;
@@ -268,6 +267,7 @@ nav ion-icon {
   flex:1 2 auto;
   text-decoration:none;
   margin-top:2vmin;
+  background-color:black;
   border:1px solid darkgrey;
   box-sizing:border-box;
   box-shadow:3px 3px rgba(150,150,200,1);
@@ -275,6 +275,9 @@ nav ion-icon {
 
 .project-thumbnail {
   width:100%;
+  flex-grow:6;
+  max-width:300px;
+  max-height:300px;
   margin:0 auto;
   background-color:darkgrey;
   border:1px solid black;

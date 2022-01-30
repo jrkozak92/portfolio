@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Click Battle!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+  </head>
+  <body>
+    <h1>Click Battle!</h1>
+    <h2>Level: <span id="level"></span></h2>
+    <div id="computer-clicks" class="click-counter">
+      <h2>Computer Count:</h2>
+      <h3 id="computer-score">0</h3>
+    </div>
+    <div id="player-clicks" class="click-counter">
+      <h2>Player Count:</h2>
+      <h3 id="player-score"></h3>
+    </div>
+    <button id="start" class="FS-button">
+      Start Game!
+    </button>
+    <button id="click-here" class="hide FS-button">
+      Click!
+    </button>
+    <button id="next-level" class="toggleButton hide">
+      Next Level
+    </button>
+    <div>
+    <button id="try-again" class="toggleButton hide">
+      Try again?
+    </button>
+    <button id="start-over" class="toggleButton hide">
+      Start Over?
+    </button>
+    </div>
+    <div id="summary">
+      Let's do this!
+      <br/>
+      Click anywhere to Start!
+    </div>
+    <div id="input-div">
+      <input id="winning-number" type="text" placeholder="Race to..."></input>
+      <input id="submit" type="submit" value="Set"></input>
+    </div>
+  </body>
+</html>

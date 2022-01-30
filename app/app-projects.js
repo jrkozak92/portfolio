@@ -1,15 +1,19 @@
-const projects = [{name: 'Etch-a-Sketch',
-                  description: 'jQuery app that emulates a digital Etch-a-Sketch, complete with Classic trace and Drag to Draw modes.',
+const projects = [{name: 'Click Battle!',
+                  description: 'Can you click faster than the computer? How long can you keep it up?',
+                  imageRef: '../images/click-battle.png',
+                  path: '../projects/click-battle/index.html'},
+                  {name: 'Etch-a-Sketch',
+                  description: 'jQuery app that emulates a digital Etch-a-Sketch, complete with Classic trace and Drag to Draw modes. (Probably not mobile friendly)',
                   imageRef: '../images/etch-a-sketch.png',
                   path: '../projects/etch-a-sketch/index.html'},
-                  {name: 'test',
-                  description: 'testing stuff',
-                  imageRef: '../images/test-project.png',
-                  path: '../projects/#'},
-                  {name: 'test',
-                  description: 'testing stuff',
-                  imageRef: '../images/test-project.png',
-                  path: '../projects/#'}
+                  {name:'Flowerbox',
+                  description:'Flexbox-intensive Mockup copy of a fake company website.',
+                  imageRef:'../images/flowerbox.png',
+                  path:'../projects/FlowerBox/index.html'},
+                  {name:'Lawnmower',
+                  description:'Text-based lawn-mowing themed strategy game built in vanilla JavaScript. (Probably not popup blocker friendly)',
+                  imageRef:'../images/lawnmower.png',
+                  path:'../projects/lawnmower/index.html'}
                 ]
 
 
