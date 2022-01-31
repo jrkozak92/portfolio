@@ -16,7 +16,17 @@ const projects = [{name: 'Click Battle!',
                   path:'../projects/lawnmower/index.html'}
                 ]
 
-
+const carouselImages = [{path:'../images/buddy&ella.jpeg',
+                          description:'Buddy & Ella living the dream'},
+                        {path:'../images/buddy-derp.jpeg',
+                          description:'Buddy after a long day'},
+                        {path:'../images/ella-glamour.jpeg',
+                          description:'Ella looking beautiful'},
+                        {path:'../images/fpv.mov',
+                          description:'FPV drone highlight reel'},
+                        {path:'../images/amboise-chateau.jpeg',
+                          description:`Château d'Amboise in the Loire Valley of France`}
+                        ]
 
 
 
@@ -82,4 +92,50 @@ $(() => {
       $('#open-nav').css('display','none')
     }
   })
+
+  //Carousel controller
+  let carouselIndex = 0
+  let $displayThis = undefined
+  let $displayDescription = undefined
+  //movie or image
+  const generateCarouselConent = () => {
+    if ( carouselImages[carouselIndex].path.charAt(carouselImages[carouselIndex].path.length - 1)  === 'v' ) {
+        $displayThis = $('<video controls autoplay muted>')
+                        .attr('src', carouselImages[carouselIndex].path)
+                        // .attr('autoplay')
+                        // .attr('controls')
+                        // .attr('muted')
+      } else {
+        $displayThis = $('<img>')
+                        .attr('src', carouselImages[carouselIndex].path)
+    }
+
+    $displayDescription = $('<p>')
+                          .attr('id','carousel-description')
+                          .text(carouselImages[carouselIndex].description)
+
+    $displayThis.attr('id','displayed-carousel-image')
+
+    $('#carousel-content').empty()
+    $('#carousel-content').append($displayThis)
+    $('#carousel-content').append($displayDescription)
+  }
+
+  generateCarouselConent()
+
+  $('#left-carousel-button').on('click', () => {
+    carouselIndex--
+    if (carouselIndex < 0){
+      carouselIndex = carouselImages.length - 1
+    }
+    generateCarouselConent()
+  } )
+  $('#right-carousel-button').on('click', () => {
+    carouselIndex++
+    if (carouselIndex >= carouselImages.length){
+      carouselIndex = 0
+    }
+    generateCarouselConent()
+  })
+
 })
