@@ -286,9 +286,11 @@ nav ion-icon {
 }
 
 .project-thumbnail {
-  width:100%;
-  flex-grow:6;
+  max-width:100%;
   max-height:200px;
+  flex-grow:6;
+  height:auto;
+  width:auto;
   overflow:hidden;
   margin:0 auto;
   background-color:darkgrey;
@@ -560,7 +562,8 @@ nav ion-icon {
     padding-top:10vmin;
     padding-bottom:10vmin;
     border:none;
-    background-color:rgba(150,150,200,1)
+    background-color:rgba(150,150,200,1);
+    transition:none;
   }
 
   nav ion-icon {

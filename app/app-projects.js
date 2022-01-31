@@ -102,9 +102,7 @@ $(() => {
     if ( carouselImages[carouselIndex].path.charAt(carouselImages[carouselIndex].path.length - 1)  === 'v' ) {
         $displayThis = $('<video controls autoplay muted>')
                         .attr('src', carouselImages[carouselIndex].path)
-                        // .attr('autoplay')
-                        // .attr('controls')
-                        // .attr('muted')
+
       } else {
         $displayThis = $('<img>')
                         .attr('src', carouselImages[carouselIndex].path)
@@ -120,9 +118,9 @@ $(() => {
     $('#carousel-content').append($displayThis)
     $('#carousel-content').append($displayDescription)
   }
-
+  //initial carousel on load
   generateCarouselConent()
-
+  //carousel changes event listeners
   $('#left-carousel-button').on('click', () => {
     carouselIndex--
     if (carouselIndex < 0){
