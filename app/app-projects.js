@@ -24,11 +24,10 @@ const projects = [{name: 'Click Battle!',
 $(() => {
   //Loops through Projects array to create cards
   for (let obj of projects) {
-    let $project = $('<a>')
+    let $project = $('<div>')
                   .addClass('project')
                   .attr('id',`project-${projects.indexOf(obj)}`)
-                  .attr('href', obj.path)
-                  .attr('target','_blank')
+
 
     let $image = $('<img>')
                 .attr('src', obj.imageRef)
@@ -48,7 +47,15 @@ $(() => {
 
     $project.on('click', () => {
       //modal creation and population
-
+      let $modalDiv = $('<div>').attr('id','modal-div')
+      let $modal = $('<iframe>').attr('src', obj.path)
+                                .attr('title', obj.name)
+                                .addClass('modal-frame')
+      $modalDiv.append($modal)
+      $modalDiv.on('click', () => {
+        $modalDiv.remove()
+      })
+      $('body').append($modalDiv)
     })
 
 
