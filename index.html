@@ -2,15 +2,22 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <!-- viewport helper tag -->
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
+    <!-- tab title -->
     <title>Joey's Portfolio</title>
+    <!-- links css -->
     <link href="./style/style.css" rel="stylesheet">
+    <!-- links jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- links js file -->
     <script src="./app/app.js"></script>
   </head>
   <body>
     <!-- Open Navbar appears on closed menu click -->
     <ul id="open-nav" class="hide">
+      <!-- list items are links to each page -->
+      <!-- except for the current page -->
       <a href="#" class="nav-link"><li class="nav-list ">Home</li></a>
       <a href="./html/bio.html" class="nav-link"><li class="nav-list ">Bio</li></a>
       <a href="./html/resume.html" class="nav-link"><li class="nav-list ">Resume</li></a>
@@ -19,34 +26,43 @@
     </ul>
     <!-- contains everything in the top 10%ish of the screen -->
     <div id="top-block">
+      <!-- contains image, put it in a div for special effect -->
       <div id="headshot"></div>
+      <!-- name text -->
       <h1 id="main-title">Joey Kozak</h1>
       <!-- button to show/hide nav menu -->
       <nav class="closed-nav">
+        <!-- hamburger icon -->
         <ion-icon name="menu-outline"></ion-icon>
       </nav>
     </div>
     <!-- Home content -->
     <div id="main-content-container">
+      <!-- content header text -->
       <h2 id="welcome">Welcome!</h1>
+        <!-- content text with links where appropriate -->
       <p class="content">
         Welcome to my Portfolio website! Please have a look around, and if you like what you see and want to chat about it, or development in general, I can be contacted through multiple channels available on the <a href="./html/links.html" class="content-links">Links Page</a>. Throughout the site you will find a bunch of information about me, my skills, my history with development, and examples of my work.
       </p>
+      <!-- more content -->
       <p class="content">
         This site is currently in ongoing development as I work my way through my <a href="https://generalassemb.ly/education/software-engineering-immersive/" class="content-links">Remote Software Engineering Immersive</a> program with <a href="https://generalassemb.ly/" class="content-links">General Assembly</a>. At the moment, this site is the culmination of roughly 10 years of self-study refined by about a month of instensive review and learning led by GA. I have and will continue to write every line of code for this site, which is available for review on <a href="https://github.com/jrkozak92" class="content-links">my GitHub</a>.
       </p>
+      <!-- more content -->
       <p class="content">
         As of this writing, this site uses a variety of techcologies including HTML, CSS, JavaScript, and jQuery, and may be expanded to a framework or converted to a SPA in the future.
       </p>
     </div>
-    <!-- container for project list -->
+    <!-- container for project list generated in js -->
     <div id="project-container">
       <a href="./html/projects.html" id="project-list-title">
+        <!-- title for project list -->
         <h4>Project List</h4>
       </a>
       <!-- project <div>s are inserted here -->
+      <!-- each project opens in iframe modal when clicked, handled in js-->
     </div>
-<!-- modal testing -->
+    <!-- ionicons links -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   </body>

@@ -1,15 +1,19 @@
 @-ms-viewport{
   width: device-width;
 }
+/*helps with responsiveness */
 
+/* Google Fonts link */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* takes spacing off window to fill in edge space, applies font family to all elements */
 * {
   margin:0;
   padding:0;
   font-family: 'Montserrat Alternates', sans-serif;
 }
 
+/* sets body to flexbox and defines background image and sets generic page font size */
 body {
   display:flex;
   flex-flow: column nowrap;
@@ -17,6 +21,7 @@ body {
   font-size:1rem;
 }
 
+/* handles nav, headshot, and top name */
 #top-block {
   display:flex;
   flex-flow: row nowrap;
@@ -25,6 +30,7 @@ body {
   padding:5vmin;
 }
 
+/* handles headshot, used background image so pseudo element would play nice, apparently they don't work on img */
 #headshot {
   display:block;
   position:relative;
@@ -39,6 +45,7 @@ body {
   border:2px solid white;
 }
 
+/* pseudo element to detach animation from headshot element */
 #headshot::after {
   content:"";
   position:absolute;
@@ -52,11 +59,13 @@ body {
   transition: all .5s ease-in-out;
 }
 
+/* pseudo element hover trigger for animation */
 #headshot:hover::after {
   transform: rotate(720deg);
   box-shadow: 2vmin 2vmin rgba(150,150,200,1), -2vmin -2vmin rgba(232,232,86,1), -2.1vmin -2.1vmin black, 2.1vmin 2.1vmin black;
 }
 
+/* top menu area name text */
 #main-title {
   font-size:2em;
   font-weight:bold;
@@ -66,6 +75,7 @@ body {
   text-shadow:3px 3px black, 1px -1px black, -1px 1px black, -1px -1px black;
 }
 
+/* handles nav button for smaller screen sizes and location of hamburger icon */
 nav {
   display:flex;
   flex-flow: column nowrap;
@@ -74,6 +84,7 @@ nav {
   text-align:center;
 }
 
+/* handles nav button */
 .closed-nav {
   height:17vmin;
   width:17vmin;
@@ -82,17 +93,19 @@ nav {
   background-color:rgba(150,150,200,.8);
 }
 
+/* adds pointer to nav button on hover */
 .closed-nav:hover{
   cursor:pointer;
 }
 
+/* darkens background cover and blocks highlight on click */
 .closed-nav:active{
   cursor:pointer;
   background-color:rgba(150,150,200,1);
   user-select:none;
 }
 
-
+/* styles the open nav container with menu at various sizes */
 #open-nav {
   position:absolute;
   top:0;
@@ -112,12 +125,14 @@ nav {
   z-index:1;
 }
 
+/* sizes hamburger icon and puts it on top of open menu */
 nav ion-icon {
   font-size:128px;
   color:white;
   z-index:1;
 }
 
+/* styles menu links */
 .nav-link {
   color:white;
   text-decoration:none;
@@ -125,16 +140,19 @@ nav ion-icon {
   padding:5vmin 0;
 }
 
+/* adds effect to menu links */
 .nav-link:hover{
   text-shadow:1px 1px rgba(232,232,86,1);
   cursor:pointer;
 }
 
+/* adds effect to menu links */
 .nav-link:active {
   color:#eeeeee;
   text-shadow:1px 1px black;
 }
 
+/* sizes and places container for bulk of page content */
 #main-content-container {
   text-align:left;
   line-height:1.2em;
@@ -142,6 +160,7 @@ nav ion-icon {
   margin:0 4%;
 }
 
+/* index welcome title */
 #welcome {
   font-size:3em;
   text-align:center;
@@ -151,10 +170,12 @@ nav ion-icon {
 
 }
 
+/* applies text-shadow animation loop */
 .shadowcycle {
   animation: shadowcycle 2s linear infinite;
 }
 
+/* text-shadow animation loop */
 @keyframes shadowcycle {
   0% {text-shadow:1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black, 0 0 rgba(150,150,200,.6), 0 0 rgba(232,232,86,.6);}
   25% {text-shadow:1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black, -1vmin -1vmin rgba(150,150,200,.6), 1vmin 1vmin rgba(232,232,86,.6);}
@@ -163,22 +184,26 @@ nav ion-icon {
   100% {text-shadow:1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black, 0 0 rgba(150,150,200,.6), 0 0 rgba(232,232,86,.6);}
 }
 
+/* styles chunks of main page content */
 .content {
   background-color: rgba(255,255,255,.5);
   padding:1em;
   margin:1em 0;
 }
 
+/* styles links in main page chunks */
 .content-links {
   font-weight:bold;
   text-decoration:none;
   color:rgba(100,100,150,1);
 }
 
+/* visual cue for content links */
 .content-links:hover {
   text-shadow:1px 1px rgba(232,232,86,.8);
 }
 
+/* sets styling for title on bio page */
 #bio-title {
   font-size:2em;
   background-color: rgba(232,232,86,.8);
@@ -190,6 +215,7 @@ nav ion-icon {
   text-shadow:3px 3px black, -1px 1px black, 1px -1px black, -1px -1px black;
 }
 
+/* sets styling for title on links page */
 #link-list-title {
   font-size:2em;
   background-color: rgba(232,232,86,.8);
@@ -201,6 +227,7 @@ nav ion-icon {
   text-shadow:3px 3px black, -1px 1px black, 1px -1px black, -1px -1px black;
 }
 
+/* sets sizing and coloring for link page main content */
 #link-container {
   text-align:center;
   background-color: rgba(255,255,255,.5);
@@ -209,6 +236,7 @@ nav ion-icon {
   box-shadow:3px 3px rgba(150,150,200,1);
 }
 
+/* styles links on links page */
 .list-link {
   display:flex;
   max-width:400px;
@@ -221,17 +249,20 @@ nav ion-icon {
   margin:0 auto;
 }
 
+/* styles icons on links page */
 .link-icon {
   font-size:32px;
   color:rgba(100,100,150,1);
   padding:1rem;
 }
 
+/* didn't end up using this, but was meant to become a tooltip style popup on my business link */
 .small {
   display:none;
   font-size:.75em;
 }
 
+/* generic container for projects to be inserted into */
 #project-container {
   display:flex;
   flex-flow:row wrap;
@@ -243,6 +274,7 @@ nav ion-icon {
   margin:2%;
 }
 
+/* title bar for projects */
 #project-list-title {
   font-size:2em;
   background-color: rgba(232,232,86,.8);
@@ -256,11 +288,12 @@ nav ion-icon {
   text-shadow:3px 3px black, -1px 1px black, 1px -1px black, -1px -1px black;
 }
 
+/* visual cue that it's a link */
 #project-list-title:hover {
   box-shadow:none;
 }
 
-
+/* styles project cards once appended to DOM */
 .project{
   display:flex;
   flex-flow: column nowrap;
@@ -276,10 +309,12 @@ nav ion-icon {
   cursor:pointer;
 }
 
+/* visual cue that they're clickable */
 .project:hover {
   box-shadow:3px 3px rgba(232,232,86,1);
 }
 
+/* sizing and locating images in project cards */
 .project-thumbnail {
   max-width:100%;
   max-height:200px;
@@ -292,6 +327,7 @@ nav ion-icon {
   border:1px solid black;
 }
 
+/* styling for titles on project cards */
 .project-title {
   font-size:1.5em;
   text-align:center;
@@ -302,6 +338,7 @@ nav ion-icon {
   text-shadow:1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black;
 }
 
+/* styling for description on project cards */
 .project-description {
   font-size:1em;
   text-align:left;
@@ -313,6 +350,7 @@ nav ion-icon {
   border:1px solid black;
 }
 
+/* styles modals when appended */
 #modal-div {
   position:fixed;
   display:flex;
@@ -325,6 +363,7 @@ nav ion-icon {
   z-index:10;
 }
 
+/* styles iframe for modal content */
 .modal-frame {
   position:relative;
   width:80vw;
@@ -332,6 +371,7 @@ nav ion-icon {
   background-color:white;
 }
 
+/* styles main container for resume page */
 #resume-container {
   display:flex;
   flex-flow: column nowrap;
@@ -342,6 +382,7 @@ nav ion-icon {
   background-color: rgba(255,255,255,.5);
 }
 
+/* styles main resume page title bar */
 #resume-page-title {
   font-size:2em;
   position:relative;
@@ -355,11 +396,13 @@ nav ion-icon {
   text-shadow:3px 3px black, -1px 1px black, 1px -1px black, -1px -1px black;
 }
 
+/* handles resume name instance */
 #name-top {
   font-size:2em;
   margin:.5em .25em .25em .25em;
 }
 
+/* handles name subtext container */
 #info {
   display:flex;
   flex-flow: row wrap;
@@ -368,6 +411,7 @@ nav ion-icon {
   margin: 1vmin auto;
 }
 
+/* handles name subtext text */
 .info-text {
   text-align:center;
   min-width:150px;
@@ -375,16 +419,19 @@ nav ion-icon {
   margin:0 auto;
 }
 
+/* handles resume personal statement */
 #summary {
   padding:1vmin;
   border-top: 1px solid rgba(150,150,200,1);
   border-bottom: 1px solid rgba(150,150,200,1);
 }
 
+/* handles technical skills list */
 #technical-skills ul {
   margin-left:5vmin;
 }
 
+/* generic handler for each seciton title bar */
 .resume-section-title {
   text-align:center;
   font-size:1em;
@@ -396,39 +443,47 @@ nav ion-icon {
   box-shadow:3px 3px rgba(232,232,86,1);
 }
 
+/* handles company name styling */
 .job-company {
   font-weight:bold;
   margin-top:2vmin;
 }
 
+/* handles job title */
 .job-title {
   font-style:italic;
 }
 
+/* was meant to handle job description, if needed */
 .job-description {
 
 }
 
+/* handles employment history list */
 #employment ul {
   margin-left:5vmin;
 }
 
+/* education container */
 .ed-div{
   margin: 2vmin auto;
 }
 
+/* school name text */
 .ed-establishment {
   font-weight:bold;
 }
 
+/* location text */
 .ed-location {
   font-style:italic;
 }
-
+ /* pushes date info to right side of container */
 .right-float {
   float:right;
 }
 
+/* styles bio carousel main container */
 #carousel {
   display:flex;
   flex-flow:row nowrap;
@@ -439,9 +494,9 @@ nav ion-icon {
   text-align:center;
   background-color:rgba(0,0,0,.6);
   margin-bottom:2vmin;
-  border:1px solid gold;
 }
 
+/* handles middle carousel content */
 #carousel-content {
   flex:8 8;
   display:flex;
@@ -449,17 +504,18 @@ nav ion-icon {
   justify-content: space-between;
   align-items: center;
   max-height:700px;
-  border:1px solid pink;
+  border:1px solid black;
 }
 
+/* handles carousel images and videos */
 #displayed-carousel-image {
   flex:9 9;
   max-width:100%;
   max-height:95%;
   margin:0 auto;
-  border:1px solid gold;
 }
 
+/* handles shared button styling */
 .carousel-button {
   flex:1 1;
   font-size:3em;
@@ -469,17 +525,18 @@ nav ion-icon {
   padding:0;
   margin:0;
   background-color:rgba(0,0,0,.4);
-  border:1px solid gold;
 }
 
+ /* handled individual button styling pre-flexbox container */
 #left-carousel-button {
 
 }
-
+/* handled individual button styling pre-flexbox container */
 #right-carousel-button {
 
 }
 
+/* handles description text location and sizing */
 #carousel-description {
   flex:1 1;
   color:white;
@@ -488,28 +545,33 @@ nav ion-icon {
   background-color:rgba(0,0,0,.4);
 }
 
+/* used here and there to hide elements when needed */
 .hide {
   display:none;
 }
 
-
+/* changes styling for screens bigger than 580px */
 @media screen and (min-width: 580px) {
+/* changes font-size to affect anything sized with ems */
   body {
     font-size:1.2rem;
   }
-
+/* resizes top bar items for different screen */
   #headshot, .closed-nav {
     height:13vmin;
     min-width:0;
     width:13vmin;
   }
 
+/* allows projects to go 2 wide */
   .project {
     flex:0 2 49%;
   }
 }
 
+/* changes styling for screens bigger than 820px */
 @media screen and (min-width: 820px) {
+  /* handles layout changes for top bar area */
   #top-block {
     display:flex;
     flex-flow: column nowrap;
@@ -522,12 +584,14 @@ nav ion-icon {
     padding:5vmin 5vmin 0 5vmin ;
   }
 
+/* resizes headshot for different layout */
   #headshot {
     min-width:0;
     width:13vmin;
     height:13vmin;
   }
 
+/* resizes name for different layout and ensures it shows over other elements */
   #main-title {
     font-size:1.5em;
     color:white;
@@ -536,11 +600,12 @@ nav ion-icon {
     z-index:1;
   }
 
+/* hides nav button */
   nav{
     display:none;
   }
 
-
+/* shows nav menu and handles location and sizing */
   #open-nav {
     align-self:flex-end;
     position:absolute;
@@ -559,10 +624,12 @@ nav ion-icon {
     transition:none;
   }
 
+/* hides hamburger */
   nav ion-icon {
     display:none;
   }
 
+/* handles menu buttons for different layout */
   .nav-link {
     color:white;
     text-decoration:none;
@@ -570,21 +637,26 @@ nav ion-icon {
     padding:1vmin 0;
   }
 
+/* visual cue that they're clickable */
   .nav-link:hover{
     text-shadow:1px 1px rgba(232,232,86,.8);
   }
 
+/* visual cue on click */
   .nav-link:active {
     color:#eeeeee;
     text-shadow:1px 1px black;
   }
 
+/* if <li>s needed styling themselves */
   .nav-list{
 
   }
 }
 
+/* changes styling for screens bigger than 1024px */
 @media screen and (min-width: 1024px) {
+  /* restyles top block section for only name and image */
   #top-block {
     display:flex;
     flex-flow: row nowrap;
@@ -597,6 +669,7 @@ nav ion-icon {
     margin-bottom:0;
   }
 
+/* resizes image for different layout */
   #headshot {
     min-width:0;
     width:13vmin;
@@ -604,6 +677,7 @@ nav ion-icon {
     z-index:1;
   }
 
+/* resizes and moves name for different layout */
   #main-title {
     height:2em;
     font-size:1.5em;
@@ -614,11 +688,12 @@ nav ion-icon {
     z-index:1;
   }
 
+/* ensures nav button is hidden */
   nav{
     display:none;
   }
 
-
+/* restyles nav menu for different layout */
   #open-nav {
     top:0;
     display:flex;
@@ -633,10 +708,12 @@ nav ion-icon {
     background-color:rgba(150,150,200,1)
   }
 
+/* ensures hamburger is hidden */
   nav ion-icon {
     display:none;
   }
 
+/* restlyes menu links for different layout */
   .nav-link {
     color:white;
     text-decoration:none;
@@ -644,27 +721,33 @@ nav ion-icon {
     padding:1vmin 0;
   }
 
+/* visual cue they're clickable */
   .nav-link:hover{
     text-shadow:1px 1px rgba(232,232,86,.8);
   }
 
+/* visual cue for click */
   .nav-link:active {
     color:#eeeeee;
     text-shadow:1px 1px black;
   }
 
+/* if <li>s needed styling themselves */
   .nav-list{
 
   }
 
+/* restyles generic project container */
   #project-container {
     max-width:1200px;
   }
 
+/* allows projects to go 3 wide */
   .project {
     flex:0 3 32%;
   }
 
+/* restyles main container for resume content */
   #resume-container {
     max-width:1300px;
     align-self:center;

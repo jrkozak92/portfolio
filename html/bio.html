@@ -2,47 +2,70 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <!-- viewport helper tag -->
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
+    <!-- tab title -->
     <title>Joey's Portfolio</title>
+    <!-- links css -->
     <link href="../style/style.css" rel="stylesheet">
+    <!-- links jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- links js file -->
     <script src="../app/app-projects.js"></script>
   </head>
   <body>
+    <!-- Open Navbar appears on closed menu click -->
     <ul id="open-nav" class="hide">
+      <!-- list items are links to each page -->
+      <!-- except for the current page -->
       <a href="../index.html" class="nav-link"><li class="nav-list ">Home</li></a>
       <a href="#" class="nav-link"><li class="nav-list ">Bio</li></a>
       <a href="./resume.html" class="nav-link"><li class="nav-list ">Resume</li></a>
       <a href="./projects.html" class="nav-link"><li class="nav-list ">Projects</li></a>
       <a href="./links.html" class="nav-link"><li class="nav-list ">Links</li></a>
     </ul>
+    <!-- contains everything in the top 10%ish of the screen -->
     <div id="top-block">
+      <!-- contains image, put it in a div for special effect -->
       <div id="headshot"></div>
+      <!-- name text -->
       <p id="main-title">Joey Kozak</p>
+      <!-- button to show/hide nav menu -->
       <nav class="closed-nav">
+        <!-- hamburger icon -->
         <ion-icon name="menu-outline"></ion-icon>
       </nav>
     </div>
+    <!-- generic content container -->
     <div id="main-content-container">
+      <!-- bio page title block -->
       <h2 id="bio-title">Bio</h2>
+      <!-- generic content handler and links -->
       <p class="content">
         I graduated from <a href="https://www.trinity.edu/" class="content-links">Trinity University</a>, class of '14, with my B.S. in Business Administration with a concentration in Marketing. After graduating with such a broadly scoped degree, I had no idea what I wanted to do with my life. So, I bounced from managing a <a href="https://www.jetspizza.com/stores/texas/tomball/24225-kuykendahl-drive/" class="content-links">restaurant</a> to office management and event assistance with a <a href="https://www.airrosti.com/" class="content-links">physical rehabilitation clinic</a> to digital marketing in <a href="http://containmentsolutions.com/" class="content-links">downstream Oil & Gas</a> to <a href="https://www.3-gig.com/" class="content-links">Management/Software Consulting</a> in upstream Oil & Gas to starting <a href="http://jroneaerial.com/" class="content-links">my own business</a> as a sUAS (read 'Drones') operator doing freelance/contract insurance inspections, marketing asset capture and production, data collection, and custom creative work.
       </p>
+      <!-- generic content handler and links -->
       <p class="content">
         That said, my work (at least the parts of it that I enjoyed the most) was continually pointing me toward technology and software development, which lead me here. I am currently taking part in a Remote Software Engineering Immersive bootcamp to formalize and modernize the knowledge I already have and to learn everything I can about software development with the goal of starting an actual career (as opposed to changing industries every few years) as a Software Engineer.
       </p>
+      <!-- generic content handler and links -->
       <p class="content">
         In my down-time, which is in short supply nowadays, I enjoy playing with my dogs, Ella and Buddy, flying FPV drones, speedsolving Rubik's Cubes of varying sizes, playing video games, international travel (if I'm really lucky), and generally spending time with my wife. I aspire to single-handedly write and release a few applications into the world, and to become confidently conversational in Spanish. Which of those will come first is very hard to say at the moment, I think I'm within a year's effort of being able to do either.
       </p>
+      <!-- image carousel -->
       <div id="carousel">
+        <!-- previous button -->
         <button id="left-carousel-button" class="carousel-button"><
         </button>
+        <!-- main content display -->
         <div id="carousel-content">
         </div>
+        <!-- next button -->
         <button id="right-carousel-button" class="carousel-button">>
         </button>
       </div>
     </div>
+    <!-- ionicons links -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   </body>
