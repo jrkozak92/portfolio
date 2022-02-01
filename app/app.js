@@ -74,4 +74,14 @@ $(() => {
       }
     })
 
+    //Shadowcycle animation controller
+    $('#welcome').on('mouseenter', () => {
+      $('#welcome').addClass('shadowcycle')
+    })
+
+    $('#welcome').on('mouseleave', () => {
+      $('.shadowcycle').on('animationiteration', () => {
+        $('#welcome').removeClass('shadowcycle').off('animationiteration')
+      })
+    })
 })

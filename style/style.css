@@ -25,8 +25,6 @@ body {
   padding:5vmin;
 }
 
-
-
 #headshot {
   display:block;
   position:relative;
@@ -39,7 +37,6 @@ body {
   border-radius:50%;
   box-sizing:content-box;
   border:2px solid white;
-
 }
 
 #headshot::after {
@@ -59,13 +56,6 @@ body {
   transform: rotate(720deg);
   box-shadow: 2vmin 2vmin rgba(150,150,200,1), -2vmin -2vmin rgba(232,232,86,1), -2.1vmin -2.1vmin black, 2.1vmin 2.1vmin black;
 }
-
-/*
-Stretch Goal - Have box-shadow rotate without image using pseudo elements
-#headshot:hover::after {
-  transform: rotate(180deg);
-  box-shadow: 2vmin 2vmin rgba(150,150,200,1), -2vmin -2vmin rgba(232,232,86,.8);
-} */
 
 #main-title {
   font-size:2em;
@@ -158,14 +148,19 @@ nav ion-icon {
   margin-bottom:2rem;
   color:white;
   text-shadow: 1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black;
-  transition: all .2s ease-in-out;
+
 }
 
-#welcome:hover {
-    transition: all .2s ease-in-out;
-    text-shadow:1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black, -1vmin -1vmin rgba(150,150,200,.6), 1vmin 1vmin rgba(232,232,86,.6);
-    /* stretch goal - have text-shadow animate breifly out and back in on hover, maybe use .hover() jquery
-*/
+.shadowcycle {
+  animation: shadowcycle 2s linear infinite;
+}
+
+@keyframes shadowcycle {
+  0% {text-shadow:1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black, 0 0 rgba(150,150,200,.6), 0 0 rgba(232,232,86,.6);}
+  25% {text-shadow:1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black, -1vmin -1vmin rgba(150,150,200,.6), 1vmin 1vmin rgba(232,232,86,.6);}
+  50% {text-shadow:1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black, 1vmin -1vmin rgba(150,150,200,.6), -1vmin 1vmin rgba(232,232,86,.6);}
+  75% {text-shadow:1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black, 1vmin 1vmin rgba(150,150,200,.6), -1vmin -1vmin rgba(232,232,86,.6);}
+  100% {text-shadow:1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black, 0 0 rgba(150,150,200,.6), 0 0 rgba(232,232,86,.6);}
 }
 
 .content {
@@ -335,8 +330,6 @@ nav ion-icon {
   width:80vw;
   height:85vh;
   background-color:white;
-  /* max-width:80vw;
-  max-height:85vh; */
 }
 
 #resume-container {
