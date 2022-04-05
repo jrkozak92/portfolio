@@ -1,15 +1,15 @@
-const bestProjects = [{name: 'Click Battle!',
-                      description: 'Can you click faster than the computer? How long can you keep it up?',
-                      imageRef: './images/click-battle.png',
-                      path: './projects/click-battle/index.html'},
-                      {name: 'Etch-a-Sketch',
-                      description: 'jQuery app that emulates a digital Etch-a-Sketch, complete with Classic trace and Drag to Draw modes.',
-                      imageRef: './images/etch-a-sketch.png',
-                      path: './projects/etch-a-sketch/index.html'},
-                      {name:'Flowerbox',
-                      description:'Flexbox-intensive Mockup copy of a fake company website',
-                      imageRef:'./images/flowerbox.png',
-                      path:'./projects/FlowerBox/index.html'}
+const bestProjects = [{name: 'HobbyHelper',
+                      description: 'Looking for a new hobby? Look no further!',
+                      imageRef: './images/hobbyhelper.png',
+                      path: 'https://shielded-retreat-18321.herokuapp.com/hobbies'},
+                      {name: 'Futurama Fan App',
+                      description: 'Welcome to the World of Tomorrow! Made by two huge Futurama nerds, featuring a list of characters and episodes pulled from a 3rd party API with full CRUD functionality!',
+                      imageRef: './images/futurama.png',
+                      path: 'https://shrouded-cove-05719.herokuapp.com/'},
+                      {name:'PetTracker',
+                      description:"Track your pet's daily needs, share milestones with others, and crowdsource information on lost pets via Google Maps!",
+                      imageRef:'./images/tracker.png',
+                      path:'https://stark-beach-27454.herokuapp.com/tracker'}
                     ]
 // array of objects of projects to populate onto homepage
 
